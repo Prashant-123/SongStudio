@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/exo_previous"
+            android:padding="6dp"
+            android:layout_weight="1"
+            android:tint="@color/black"
+            style="@style/ExoMediaButton.Previous"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/exo_play"
+            android:padding="6dp"
+            android:layout_weight="1"
+            android:tint="@color/black"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            style="@style/ExoMediaButton.Play"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/exo_next"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:tint="@color/black"
+            style="@style/ExoMediaButton.Next"/>
+
+    </LinearLayout>
+
+</layout>

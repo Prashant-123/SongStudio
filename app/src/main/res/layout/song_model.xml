@@ -1,0 +1,65 @@
+<layout>
+
+    <data>
+        <variable
+            name="song"
+            type="com.songstudio.models.SongModel" />
+    </data>
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:clickable="true"
+        android:layout_weight="1"
+        app:rippleColor="@color/white"
+        android:layout_margin="8dp"
+        android:checkable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        android:id="@+id/model">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            cover_image="@{song.cover_image}"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{song.song_name}"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/song_name"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{song.artist}"
+            android:layout_gravity="center"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:id="@+id/artists"
+            android:textColor="@color/artist_name"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+</layout>
